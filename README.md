@@ -68,6 +68,7 @@ make CLASSIFY_TEST <br />
 Run the executable CLASSIFY_TEST. <br />
 ./CLASSIFY_TEST RED_BAND.tif GREEN_BAND.tif BLUE_BAND.tif INFRARED_BAND.tif <br /><br />
 with :
+
 - RED_BAND.tif is the red band image;
 - GREEN_BAND.tif is the green band image;
 - BLUE_BAND.tif is the blue band image;
@@ -76,6 +77,7 @@ This classifies the test images of 4 bands into the 7 classes. Stores converted 
 in file testdata. Stores classified test data in file testdata.classified. Generates the
 classified output image classified.jpg
 where colors represent :
+
 - blue - class 1
 - green - class 2
 - red - class 3
