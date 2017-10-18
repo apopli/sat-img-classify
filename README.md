@@ -11,13 +11,13 @@ satellite imagery.
 
 The code is compilable on Unix/Linux.
 
-- Compilation. 
+- Compilation. <br />
 Automated compilation requires the make program.
 
-- Library. 
+- Library. <br />
 This code requires the libpng, libjpeg and libtiff library.
 
-- Image format. 
+- Image format. <br />
 Formats supported are jpeg , png and tiff. 
 
 -------------------------------------------------------------------------
@@ -26,46 +26,46 @@ Usage:
 
 2. Five programs can be executed in this package. The first 3 are part of training the
 classifier. The fourth tests the classifier on the traing data. The fifth applies the
-classifier to any test images.
+classifier to any test images. <br />
 imageio.c is the image I/O library and svm.cpp is the SVM library.
 
-3. Compile the source code of IMG2TRAIN (img_traindata.c) by running
-make IMG2TRAIN
-Run the executable IMG2TRAIN.
-./IMG2TRAIN
+3. Compile the source code of IMG2TRAIN (img_traindata.c) by running <br />
+make IMG2TRAIN <br />
+Run the executable IMG2TRAIN. <br />
+./IMG2TRAIN <br />
 This converts the training windows from 4 bands to training data and stores it in the
 file traindata.
 
-4. Compile the source code of CROSSVAL (train_cv.c) by running
-make CROSSVAL
+4. Compile the source code of CROSSVAL (train_cv.c) by running <br />
+make CROSSVAL <br />
 The values of C,gamma and n are to be input in the function train_params inside the MAIN
-of train_cv.c.
-Run the executable CROSSVAL.
-./CROSSVAL
+of train_cv.c. <br />
+Run the executable CROSSVAL. <br />
+./CROSSVAL <br />
 This performs n-fold cross-validation on traing data with inputs C and gamma and gives
 the Cross Validation Accuracy in result.
 
-5. Compile the source code of TRAIN (sat_train.c) by running
-make TRAIN
+5. Compile the source code of TRAIN (sat_train.c) by running <br />
+make TRAIN <br />
 The values of C and gamma are to be input in the function train_params inside the MAIN
-of sat_train.c.
-Run the executable TRAIN.
-./TRAIN
+of sat_train.c. <br />
+Run the executable TRAIN. <br />
+./TRAIN <br />
 This trains the classifier with training data using the values of inputs C and gamma.
 The classifier model is stored in the file traindata.model
 
-6. Compile the source code of CLASSIFY_TRAIN (sat_classify.c) by running
-make CLASSIFY_TRAIN
-Run the executable CLASSIFY_TRAIN.
-./CLASSIFY_TRAIN
+6. Compile the source code of CLASSIFY_TRAIN (sat_classify.c) by running <br />
+make CLASSIFY_TRAIN <br />
+Run the executable CLASSIFY_TRAIN. <br />
+./CLASSIFY_TRAIN <br />
 This classifies the training data in traindata using the model in traindata.model and
 stores the classified result in the file traindata.classified. Computes accuracy parametrs
 and stores Confusion Matrix in the file confusion, Accuracy and Kappa Coefficient are is
 output onto the terminal.
 
-7. Compile the source code of CLASSIFY_TEST (test_classify.c) by running
-make CLASSIFY_TEST
-Run the executable CLASSIFY_TEST.
+7. Compile the source code of CLASSIFY_TEST (test_classify.c) by running <br />
+make CLASSIFY_TEST <br />
+Run the executable CLASSIFY_TEST. <br />
 ./CLASSIFY_TEST RED_BAND.tif GREEN_BAND.tif BLUE_BAND.tif INFRARED_BAND.tif
 
 with :
@@ -86,17 +86,17 @@ where colors represent :
 - magenta - class 6
 - black - class 7
 
-8. To delete redundant files,
+8. To delete redundant files, <br />
 run make clean 
 
-----Usage of demo file:
+----Usage of demo file: <br />
 Since we have already generated the file traindata.model and stored in the package directory,
 CLASSIFY_TEST can be directly used to classify any input test images using this demo file.
 
-In classify_demo.sh , change the parameters as:
-red as "full name of red band image";
-green as "full name of green band image";
-blue as "full name of blue band image";
+In classify_demo.sh , change the parameters as: <br />
+red as "full name of red band image"; <br />
+green as "full name of green band image"; <br />
+blue as "full name of blue band image"; <br />
 infrared as "full name of infrared band image"
 
 Run sh classify_demo.sh
