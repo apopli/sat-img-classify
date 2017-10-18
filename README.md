@@ -1,4 +1,4 @@
-% Resemblance
+# Resemblance
 
 * Author    : Anmol Popli <anmol.ap020@gmail.com> , Nitesh Arora <aranitesh101@gmail.com>
 
