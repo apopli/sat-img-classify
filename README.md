@@ -66,14 +66,12 @@ output onto the terminal.
 7. Compile the source code of CLASSIFY_TEST (test_classify.c) by running <br />
 make CLASSIFY_TEST <br />
 Run the executable CLASSIFY_TEST. <br />
-./CLASSIFY_TEST RED_BAND.tif GREEN_BAND.tif BLUE_BAND.tif INFRARED_BAND.tif
-
+./CLASSIFY_TEST RED_BAND.tif GREEN_BAND.tif BLUE_BAND.tif INFRARED_BAND.tif <br /><br />
 with :
 - RED_BAND.tif is the red band image;
 - GREEN_BAND.tif is the green band image;
 - BLUE_BAND.tif is the blue band image;
-- INFRARED_BAND.tif is the infrared band image.
-
+- INFRARED_BAND.tif is the infrared band image. <br /><br />
 This classifies the test images of 4 bands into the 7 classes. Stores converted test data
 in file testdata. Stores classified test data in file testdata.classified. Generates the
 classified output image classified.jpg
